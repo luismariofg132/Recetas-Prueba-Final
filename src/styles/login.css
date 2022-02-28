@@ -1,0 +1,13 @@
+.formLogin{
+    width: 35%;
+    margin: auto;
+    padding: 25px;
+    margin-top: 100px;
+    background-color: rgb(233, 244, 248);
+    box-shadow: 8px 6px 12px -1px #000000;
+    border-radius: 10px;
+}
+
+.formLogin Button{
+    margin: 12px 0;
+}
