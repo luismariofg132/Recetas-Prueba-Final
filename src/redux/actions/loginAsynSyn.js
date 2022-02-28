@@ -17,8 +17,9 @@ export const loginFacebook = () => {
         const provider = new FacebookAuthProvider();
         const auth = getAuth()
         signInWithPopup(auth, provider)
-            .then(({ user }) => {
-                console.log(user)
+            .then((result) => {
+                const user = result.user;
+                dispatch(loginSyncrono(user.uid, user.displayName))
             })
     }
 }

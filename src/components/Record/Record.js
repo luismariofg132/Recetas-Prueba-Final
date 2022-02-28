@@ -1,30 +1,38 @@
-import Button from 'react-bootstrap/Button'
 import React from 'react'
+import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
-import { useForm } from '../../hooks/useForm'
 import { useDispatch } from 'react-redux'
-import { loginFacebook, loginGoogle } from '../../redux/actions/loginAsynSyn'
 import { useNavigate } from 'react-router-dom'
+import { useForm } from '../../hooks/useForm'
+import { registerEmailPass } from '../../redux/actions/RecordEmailPass'
 
-const Login = () => {
-
+const Record = () => {
     const [values, handleInputChange] = useForm({
         email: "",
-        password: ""
+        password: "",
+        name: ""
     })
-
-    const dispatch = useDispatch()
     const Navigate = useNavigate()
-
-    const { email, password } = values
+    const dispatch = useDispatch()
+    const { email, password, name } = values
 
     const IniciarSesion = (e) => {
         e.preventDefault()
-        alert('Funciona')
+        dispatch(registerEmailPass(name, email, password))
     }
+
     return (
         <div>
-            <form onSubmit={IniciarSesion} className="formLogin">
+            <form className='formLogin' onSubmit={IniciarSesion}>
+                <div>
+                    <Form.Label>Nombre Completo</Form.Label>
+                    <Form.Control
+                        type="text"
+                        name='name'
+                        value={name}
+                        onChange={handleInputChange}
+                    />
+                </div>
                 <div>
                     <Form.Label>Correo Electronico</Form.Label>
                     <Form.Control
@@ -44,32 +52,18 @@ const Login = () => {
                     />
                 </div>
                 <div className="d-grid gap-2">
-                    <Button variant="primary" type='submit'>Iniciar Sesion</Button>
-                </div>
-                <div className="d-grid gap-2">
-                    <Button variant="outline-primary"
-                        onClick={() => {
-                            dispatch(loginGoogle())
-                        }}
-                    >Google</Button>
-                </div>
-                <div className="d-grid gap-2">
-                    <Button variant="primary"
-                        onClick={() => {
-                            dispatch(loginFacebook())
-                        }}
-                    >Facebook</Button>
+                    <Button variant="primary" type='submit'>Crear Cuenta</Button>
                 </div>
                 <div className="d-grid gap-2">
                     <Button variant="light"
                         onClick={() => {
-                            Navigate('/registro')
+                            Navigate('/login')
                         }}
-                    >Registrarse</Button>
+                    >Volver al Login</Button>
                 </div>
             </form>
         </div>
     )
 }
 
-export default Login
+export default Record

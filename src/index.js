@@ -4,6 +4,7 @@ import AppRouters from './Routers/AppRouters';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/styles/login.css'
 import '../src/styles/config.css'
+import '../src/styles/privacy.css'
 import { Provider } from 'react-redux';
 import { store } from './redux/store/store';
 

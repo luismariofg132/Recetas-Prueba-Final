@@ -11,3 +11,17 @@
 .formLogin Button{
     margin: 12px 0;
 }
+
+.tableIngredients{
+    width: 60%;
+    margin: auto;
+    margin-top: 100px;
+    background-color: rgb(235, 235, 235);
+}
+
+@media screen and (max-width: 768px){
+    .formLogin{
+        width: 70%;
+    }
+}
+

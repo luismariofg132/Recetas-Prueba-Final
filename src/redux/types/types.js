@@ -1,5 +1,6 @@
 export const types = {
     login: 'login',
-    register: 'registro',
-    logout: 'logout'
+    logout: 'logout',
+    newIngredient: "Nuevo Ingrediente",
+    listIngredient: "Listar Ingredientes"
 }

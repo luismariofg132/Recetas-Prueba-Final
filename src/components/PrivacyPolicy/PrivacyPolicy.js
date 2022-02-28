@@ -1,8 +1,11 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button'
+import { useNavigate } from 'react-router-dom'
 
 const PrivacyPolicy = () => {
+    const Navigate = useNavigate()
     return (
-        <div>
+        <div className='privacyPolicy'>
             <h4>Privacy Policy</h4>
             <article>
                 <p>
@@ -110,6 +113,11 @@ const PrivacyPolicy = () => {
                     rights and your Personal Information, you may send an email to lmfg06@gmail.com.
                 </p>
             </article>
+            <Button variant="dark"
+                onClick={() => {
+                    Navigate('/')
+                }}
+            >Regresar</Button>
         </div>
     )
 }
