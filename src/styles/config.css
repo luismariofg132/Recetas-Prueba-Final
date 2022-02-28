@@ -6,3 +6,35 @@ body{
     margin: 0;
     padding: 0;
 }
+
+.ingredientCont{
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 8px 6px 12px -1px #000000;
+    margin-top: 35px;
+    margin-bottom: 45px;
+
+}
+
+.ingredient{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.ingredient span{
+    margin: 0 10px 0 0;
+    
+}
+
+.ingredient .price{
+    color: green;
+}
+
+@media screen and (max-width: 768px){
+    .ingredientCont{
+        width: 70%;
+    }
+}

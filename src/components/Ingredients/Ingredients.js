@@ -6,11 +6,12 @@ import Form from 'react-bootstrap/Form'
 import { useForm } from '../../hooks/useForm'
 import { useDispatch, useSelector } from 'react-redux'
 import { AddIngredientAsyn, deleteIngredientAsyn, editIngredientAsyn, listIngredientAsyn } from '../../redux/actions/IngredientsActions'
+import { useNavigate } from 'react-router-dom'
 
 const Ingredients = () => {
     const [show, setShow] = useState(false)
     const [show2, setShow2] = useState(false)
-
+    const Navigate = useNavigate()
     const dispatch = useDispatch()
 
     useEffect(function list() {
@@ -36,6 +37,7 @@ const Ingredients = () => {
             product, brand, items, quantity, price
         }
         dispatch(AddIngredientAsyn(ingredient))
+        setShow(false)
         reset()
     }
 
@@ -46,6 +48,7 @@ const Ingredients = () => {
         }
         dispatch(editIngredientAsyn(id, ingredient))
         setShow2(false)
+        reset()
     }
 
     return (
@@ -97,6 +100,9 @@ const Ingredients = () => {
                 </Table>
                 <div className="d-grid gap-2">
                     <Button variant="dark" onClick={() => setShow(true)}>Agregar Nuevo Ingrediente</Button>
+                </div>
+                <div className="d-grid gap-2 mt-2">
+                    <Button variant="dark" onClick={() => Navigate('/')}>Volver a Comprar</Button>
                 </div>
             </div>
             <div>

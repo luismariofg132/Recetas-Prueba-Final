@@ -20,7 +20,7 @@ const Login = () => {
 
     const IniciarSesion = (e) => {
         e.preventDefault()
-        alert('Funciona')
+
     }
     return (
         <div>
