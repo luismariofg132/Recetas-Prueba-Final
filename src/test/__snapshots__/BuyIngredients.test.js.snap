@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Prueba de compra de ingredientes Verifica el permiso de autenticacion para BuyIngredient 1`] = `
+<Router
+  location={
+    Object {
+      "hash": "",
+      "key": "default",
+      "pathname": "/",
+      "search": "",
+      "state": null,
+    }
+  }
+  navigationType="POP"
+  navigator={
+    Object {
+      "action": "POP",
+      "back": [Function],
+      "block": [Function],
+      "createHref": [Function],
+      "forward": [Function],
+      "go": [Function],
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "key": "default",
+        "pathname": "/",
+        "search": "",
+        "state": null,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Routes>
+    <Route
+      element={
+        <PrivateRouter
+          isAuthenticated={false}
+        >
+          <BuyIngredients />
+        </PrivateRouter>
+      }
+      path="/*"
+    />
+  </Routes>
+</Router>
+`;
+
+exports[`Prueba de compra de ingredientes Verifica el permiso de autenticacion para Ingredient 1`] = `
+<Router
+  location={
+    Object {
+      "hash": "",
+      "key": "default",
+      "pathname": "/",
+      "search": "",
+      "state": null,
+    }
+  }
+  navigationType="POP"
+  navigator={
+    Object {
+      "action": "POP",
+      "back": [Function],
+      "block": [Function],
+      "createHref": [Function],
+      "forward": [Function],
+      "go": [Function],
+      "listen": [Function],
+      "location": Object {
+        "hash": "",
+        "key": "default",
+        "pathname": "/",
+        "search": "",
+        "state": null,
+      },
+      "push": [Function],
+      "replace": [Function],
+    }
+  }
+>
+  <Routes>
+    <Route
+      element={
+        <PrivateRouter
+          isAuthenticated={false}
+        >
+          <Ingredients />
+        </PrivateRouter>
+      }
+      path="/*"
+    />
+  </Routes>
+</Router>
+`;
